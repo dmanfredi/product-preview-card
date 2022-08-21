@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary-dark: #3c8067;
+  --clr-primary-light: #f2ebe3;
+
+  --clr-neutral-dark: #1c232b;
+  --clr-neutral-medium: #6c7289;
+  --clr-neutral-white: #ffffff;
+}
+
+body {
+  margin: 1em;
+  background-color: var(--clr-primary-light);
+  color: var(--clr-neutral-dark);
+  font-family: Montserrat, serif;
+}
+
+.container {
+  /* padding: 1.5rem; */
+  overflow: hidden;
+  background-color: var(--clr-neutral-white);
+  border-radius: 1rem;
+}
+
+.details {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.perfume-photo {
+  width: 100%;
+  /* height: 50%; */
+  overflow: hidden;
+  object-fit: cover;
+  background-image: url('images/image-product-mobile.jpg');
+}
+
+.item-type {
+  color: var(--clr-neutral-medium);
+  font-size: 0.8rem;
+  font-family: Montserrat, serif;
+  font-weight: 600;
+  letter-spacing: 0.25rem;
+  /* margin-top: 5px; */
+}
+
+.name {
+  color: var(--clr-neutral-dark);
+  font-size: 2rem;
+  font-family: Fraunces, serif;
+  font-weight: 900;
+  line-height: 2rem;
+  /* font-stretch: ultra-condensed; */
+}
+
+.description {
+  color: var(--clr-neutral-medium);
+  font-family: Montserrat, serif;
+  font-weight: 500;
+}
+
+.cost-container {
+  display: flex;
+}
+
+.price {
+  color: var(--clr-primary-dark);
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: Fraunces, serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price-old {
+  font-family: Montserrat, serif;
+  color: var(--clr-neutral-medium);
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  text-decoration: line-through;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat, serif;
+  font-weight: 700;
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-primary-light);
+  border: none;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+
+.cart-icon {
+  margin-right: 10px;
+}
+
+.buy:hover {
+  background-color: var(--clr-primary-dark);
+}
+
+@media (min-width: 700px) {
+  body {
+  }
+
+  .container {
+    overflow: hidden;
+    display: flex;
+    max-width: 30%;
+    min-width: 600px;
+    height: 25rem;
+    margin: auto;
+  }
+
+  .perfume-photo {
+    background-image: url('images/image-product-desktop.jpg');
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .details {
+    width: 50%;
+  }
+
+  .center-align {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
